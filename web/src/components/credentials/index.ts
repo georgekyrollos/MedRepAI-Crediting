@@ -1,0 +1,1 @@
+export { CredentialDetailDrawer } from './CredentialDetailDrawer'

@@ -1,0 +1,61 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+}
+
+/* Urgency level variants */
+.critical {
+  background-color: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.warning {
+  background-color: rgba(255, 152, 0, 0.12);
+  color: #e65100;
+}
+
+.attention {
+  background-color: var(--color-warning-soft);
+  color: #b8860b;
+}
+
+.ok {
+  background-color: var(--color-positive-soft);
+  color: var(--color-positive);
+}
+
+/* Pulsing dot for critical items */
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: currentColor;
+  border-radius: 50%;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+/* Expired state - more prominent */
+.expired {
+  background-color: var(--color-danger);
+  color: white;
+}
+
+.expired .dot {
+  background-color: white;
+}

@@ -1,0 +1,10 @@
+# Fix GitHub language statistics
+*.css linguist-detectable=false
+*.html linguist-detectable=false
+
+# Treat config files as vendored (not counted in stats)
+*.config.js linguist-vendored
+*.config.ts linguist-vendored
+vite.config.ts linguist-vendored
+eslint.config.js linguist-vendored
+tsconfig*.json linguist-vendored

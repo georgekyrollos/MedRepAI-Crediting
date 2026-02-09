@@ -1,0 +1,113 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  padding: var(--space-4);
+  margin: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.summaryText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.summaryText strong {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-strong);
+}
+
+.percentage {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-strong);
+}
+
+.barContainer {
+  display: flex;
+  height: 12px;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  background-color: var(--color-surface-muted);
+}
+
+.barSegment {
+  height: 100%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: filter var(--transition-fast);
+}
+
+.barSegment:hover {
+  filter: brightness(0.9);
+}
+
+.barSegment:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  z-index: 1;
+}
+
+.barSegment.pass {
+  background-color: var(--color-positive);
+}
+
+.barSegment.fail {
+  background-color: var(--color-danger);
+}
+
+.legend {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  margin: calc(var(--space-1) * -1) calc(var(--space-2) * -1);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.legendItem:hover {
+  background-color: var(--color-surface-muted);
+  color: var(--color-text-strong);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.passDot {
+  background-color: var(--color-positive);
+}
+
+.failDot {
+  background-color: var(--color-danger);
+}
+
+.hint {
+  margin: var(--space-3) 0 0;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}

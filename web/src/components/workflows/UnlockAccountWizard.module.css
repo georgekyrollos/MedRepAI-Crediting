@@ -1,0 +1,294 @@
+.modal {
+  max-width: 560px;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  color: var(--color-text-muted);
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Progress Bar */
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.progressBar {
+  flex: 1;
+  height: 6px;
+  background-color: var(--color-surface-muted);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--color-primary);
+  transition: width 300ms ease-out;
+}
+
+.progressText {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* Review Step */
+.reviewStep {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewIntro {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-4);
+}
+
+.credentialChecklist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.checklistItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background-color: var(--color-surface-muted);
+  border-radius: var(--radius-md);
+}
+
+.checklistCheck {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-positive);
+  color: white;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.checklistCheck:has(.checkNumber) {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.checkNumber {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.checklistContent {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;
+  min-width: 0;
+}
+
+.checklistName {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-strong);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Upload Step */
+.uploadStep {
+  display: flex;
+  flex-direction: column;
+}
+
+.uploadHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.uploadTitle {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-strong);
+  margin: 0 0 var(--space-1);
+}
+
+.uploadDescription {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-4);
+}
+
+.dropzone {
+  position: relative;
+  margin-bottom: var(--space-3);
+}
+
+.fileInput {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.dropzoneLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.dropzoneLabel:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-tint);
+}
+
+.dropzoneLabel:has(+ .fileInput:focus) {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.dropzoneLabel svg {
+  color: var(--color-primary);
+}
+
+.fileTypes {
+  font-size: var(--font-size-xs);
+}
+
+.fileName {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-strong);
+}
+
+.fileHint {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.stepIndicator {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.footerRight {
+  display: flex;
+  gap: var(--space-2);
+}
+
+/* Confirm Step */
+.confirmStep {
+  display: flex;
+  flex-direction: column;
+}
+
+.confirmIntro {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-4);
+}
+
+.confirmList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.confirmItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.confirmCheck {
+  color: var(--color-positive);
+}
+
+.confirmSkip {
+  color: var(--color-text-muted);
+}
+
+.skipped {
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+.confirmWarning {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  padding: var(--space-3);
+  background-color: var(--color-warning-soft);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+}
+
+/* Done Step */
+.doneStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-4) 0;
+}
+
+.doneIcon {
+  color: var(--color-positive);
+  margin-bottom: var(--space-4);
+}
+
+.doneTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-strong);
+  margin: 0 0 var(--space-2);
+}
+
+.doneText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-4);
+  max-width: 320px;
+}

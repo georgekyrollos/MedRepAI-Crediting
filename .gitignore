@@ -1,0 +1,22 @@
+# Only track web directory
+/*
+!web/
+!.gitignore
+!.gitattributes
+!README.md
+
+# Ignore these inside web/ (already in web/.gitignore but being explicit)
+web/node_modules/
+web/dist/
+web/dist-ssr/
+web/*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
